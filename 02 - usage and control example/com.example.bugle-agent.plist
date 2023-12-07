@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.example.bugle-agent</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/local/bin/bugle</string>
+        <string>listen</string>
+        <string>-f</string>
+        <string>/Library/Preferences/com.example.bugle-config.plist</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <!-- <key>StandardErrorPath</key>
+    <string>/tmp/com.example.bugle.stderr</string>
+    <key>StandardOutPath</key>
+    <string>/tmp/com.example.bugle.stdout</string> -->
+</dict>
+</plist>

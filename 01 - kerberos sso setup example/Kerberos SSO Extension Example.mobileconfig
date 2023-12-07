@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1">
+  <dict>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    <key>PayloadScope</key>
+    <string>System</string>
+    <key>PayloadUUID</key>
+    <string>FD015125-8EA3-4943-A453-23002CBD187C</string>
+    <key>PayloadOrganization</key>
+    <string>Example Company</string>
+    <key>PayloadDisplayName</key>
+    <string>Kerberos SSO Extension Example</string>
+    <key>PayloadIdentifier</key>
+    <string>com.example.kerberos-sso</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadContent</key>
+    <array>
+      <dict>
+        <key>PayloadVersion</key>
+        <integer>1</integer>
+        <key>PayloadIdentifier</key>
+        <string>109034CE-FA26-41C0-8942-A3D1A725BB70</string>
+        <key>PayloadUUID</key>
+        <string>109034CE-FA26-41C0-8942-A3D1A725BB70</string>
+        <key>PayloadDisplayName</key>
+        <string>Single Sign-On Extensions Payload</string>
+
+        <!-- SSO Specific configuration -->
+
+        <key>PayloadType</key>
+        <string>com.apple.extensiblesso</string>
+        <key>ExtensionIdentifier</key>
+        <string>com.apple.AppSSOKerberos.KerberosExtension</string>
+        <key>TeamIdentifier</key>
+        <string>apple</string>
+        <key>Type</key>
+        <string>Credential</string>
+        
+        <key>Realm</key>
+        <string>AD.EXAMPLE.COM</string>
+        
+        <key>Hosts</key>
+        <array>
+          <string>example.com</string>
+          <string>.example.com.</string>
+        </array>
+        
+        <key>ExtensionData</key>
+        <dict>
+          <key>syncLocalPassword</key>
+          <true/>
+          <key>pwReqComplexity</key>
+          <true/>
+
+          <key>customUsernameLabel</key>
+          <string>Example co. login</string>
+          <key>helpText</key>
+          <string>Hi and welcome to Example Company! Please provide your password in a textfield above. Thanks!</string>
+
+          <!-- uncomment if you want to start sso login manually with app-sso cli
+          <key>delayUserSetup</key>
+          <true/>
+          -->
+
+          <!-- uncomment if you are using TLS in LDAP
+          <key>requireTLSForLDAP</key>
+          <true/>
+          -->
+          
+        </dict>
+      </dict>
+    </array>
+  </dict>
+</plist>
